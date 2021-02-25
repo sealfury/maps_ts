@@ -1,6 +1,6 @@
 // CustomMap template can be reused for any project
 // requiring implementation of google map markers
-// based on latitude and longitude
+// based on latitude and longitude & a property w/ string value
 
 export interface Mappable {
   location: {
