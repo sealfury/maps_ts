@@ -2,7 +2,7 @@
 // requiring implementation of google map markers
 // based on latitude and longitude
 
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number
     lng: number
