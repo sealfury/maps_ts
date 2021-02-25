@@ -1,3 +1,14 @@
+// CustomMap template can be reused for any project
+// requiring implementation of google map markers
+// based on latitude and longitude
+
+interface Mappable {
+  location: {
+    lat: number
+    lng: number
+  }
+}
+
 export class CustomMap {
   private googleMap: google.maps.Map
 
@@ -7,6 +18,16 @@ export class CustomMap {
       center: {
         lat: 0,
         lng: 0,
+      },
+    })
+  }
+
+  addMarker(mappable: Mappable): void {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: mappable.location.lat,
+        lng: mappable.location.lng,
       },
     })
   }
